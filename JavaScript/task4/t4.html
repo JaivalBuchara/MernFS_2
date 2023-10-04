@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnus Task 4</title>
+</head>
+<body>
+    <center>
+        <button id = "date" onclick="f1()">
+            Get Date
+        </button>
+        <p></p>
+        <button id = "time" onclick="f2()">
+            Get Time
+        </button>
+        <p></p>
+    </center>
+    <script>
+        const date = document.getElementById("date");
+        const time = document.getElementById('time');
+        const va = new Date();
+        function f1(){
+            date.nextElementSibling.innerHTML = `The date today is :${va.getDate()}/${va.getMonth()}/${va.getFullYear()}`;
+        }
+        function f2(){
+            time.nextElementSibling.innerHTML = `The time is :${va.getHours()}:${va.getMinutes()}:${va.getSeconds()}`;
+        }
+    </script>
+</body>
+</html> 
